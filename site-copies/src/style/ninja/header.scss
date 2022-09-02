@@ -1,0 +1,52 @@
+.header {
+    background-color: $header-background;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+
+    .left, .right {
+        margin-left: 78px;
+        margin-right: 78px;
+    }
+
+    .left {
+        height: 100%;
+        
+
+        .title {
+            height: calc(100% + 30px);
+            width: 130px;
+            text-align: center;
+            position: absolute;
+            background-color: $button;
+            font-size: 16px;
+            text-shadow: 1.3px 1.3px 1px white;
+            color: white;
+            letter-spacing: .3em;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+
+            div {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .right {
+        display: flex;
+        align-items: center;
+        width: 60px;
+        
+        .social-links {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+        }
+    }
+}

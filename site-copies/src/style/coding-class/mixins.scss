@@ -1,0 +1,36 @@
+@mixin nav-link {
+    &:focus {
+        outline: none;
+    }
+    text-decoration: none;
+    color: $offwhite;
+    transition: .3s;
+    border-bottom: 2px solid transparent;
+}
+
+@mixin nav-link-hover {
+    color: $offwhite;
+    letter-spacing: 3px;
+    font-weight: 900;
+    border-bottom-color: $offwhite;
+}
+
+@mixin nav-link-active {
+    @include nav-link-hover();
+    color: $gold;
+    border-bottom-color: $gold;
+    &:hover {
+        @include nav-link-hover();
+        color: $gold;
+        border-bottom-color: $gold;
+    }
+}
+
+@mixin normal-link {
+    cursor: pointer;
+    transition: .3s;
+    color: $offwhite;
+    &:hover {
+        color: $gold;
+    }
+}

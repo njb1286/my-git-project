@@ -1,0 +1,69 @@
+.link:hover {
+    color: $link-hover;
+    cursor: pointer;
+}
+
+.open-gym-wrapper {
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    color: #414141;
+
+    .user-icon-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .user-icon {
+            color: lightgray;
+            width: 80%;
+            height: 80%;
+        }
+    }
+
+    .bottom-container {
+        margin: 15px;
+
+        .faq {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            align-items: center;
+            grid-gap: 10px;
+
+            .title {
+                font-size: 28px;
+            }
+
+            .description {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .open-gym-section {
+        background-color: white;
+
+        .user-profile {
+            width: 223px;
+            display: grid;
+            grid-template-columns: 1fr 1.3fr 1fr;
+            font-size: .7em;
+            grid-gap: 5px;
+
+            .middle {
+                display: grid;
+                align-content: center;
+            }
+
+            .right {
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+
+                .text {
+                    display: flex;
+                    align-items: left;
+                }
+            }
+        }
+    }
+}

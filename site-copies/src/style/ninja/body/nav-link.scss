@@ -1,0 +1,22 @@
+.nav-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+
+    .nav-link {
+        color: white;
+        background-color: $button;
+        cursor: pointer;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        transition: .3s;
+        min-width: 120px;
+        margin: 5px 12px;
+        font-weight: 50;
+
+        &:hover {
+            background-color: $button-hover;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+.open-hours-wrapper {
+    display: flex;
+    justify-content: center;
+    color: $light-blue;
+    
+    .open-hours {
+        display: flex;
+        justify-content: space-between;
+
+        .left {
+            margin-right: 5px;
+            text-align: left;
+        }
+
+        .right {
+            margin-left: 5px;
+            text-align: right;
+        }
+    }
+}

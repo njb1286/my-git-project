@@ -1,0 +1,91 @@
+@media (max-width: 615px) {
+    .navigation-wrapper {
+        flex-direction: column;
+        align-items: center;
+
+        .center {
+            order: 1;
+        }
+
+        .left, .right {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .left {
+            order: 2;
+        }
+        
+        .right {
+            order: 3;
+        }
+    }
+
+    .hero-section {
+        padding: 50px 20px;
+    }
+
+    .feature-section {
+        .columns {
+            grid-template-columns: none;
+            grid-template-rows: repeat(3, 1fr);
+        }
+    }
+
+
+    .navbar {
+        flex-direction: column;
+
+        .nav-link {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+    }
+
+
+    .skewed-header {
+        .header-content-wrapper .header-content {
+            flex-direction: column;
+        }
+    }
+    
+    .about-page {
+        .page-container {
+            padding-left: 21px;
+            padding-right: 21px;
+
+            .content {
+                .chef {
+                    float: none;
+                    width: 100%;
+                    margin: 0;
+                }
+            }
+        }
+
+    }
+
+    .squares-wrapper .squares {
+        .square {
+            grid-template-columns: none;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .reversed {
+            flex-direction: column;
+        }
+    }
+
+    
+    .contact-page .page-container {
+        padding-left: 21px;
+        padding-right: 21px;
+
+        .content {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 import { pages, makeLinks } from './pages-list';
+import { FaPhoneVolume } from "react-icons/fa";
 
 import Lnk from "./helpers/nav-link";
-import Logo from "../../../static/images/coding-class/decamp-fantastic-fries-logo-white.png";
+import Logo from "../../../../static/images/coding-class/decamp-fantastic-fries-logo-white.png";
 
 export default class Navbar extends Component {
     render() {
@@ -12,7 +13,7 @@ export default class Navbar extends Component {
             <div className='navigation-wrapper'>
                 <div className="left">
                     <div className="phone-icon">
-                        <FontAwesomeIcon icon="phone-volume"/>
+                        <FaPhoneVolume />
                     </div>
 
                     <div className="contact-hours-wrapper">

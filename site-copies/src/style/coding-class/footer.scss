@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap'); // &reset color
+@import "./mixins.scss";
 
 .footer {
+    @include titillium-web();
     background-color: $navy-blue;
     display: flex;
     flex-direction: column;
@@ -24,7 +26,7 @@
         }
 
         .phone, .hours {
-            font-family: "Ubuntu Condensed", sans-serif;
+            @include ubuntu-condensed();
         }
 
         .phone {
@@ -55,12 +57,14 @@
         margin-bottom: 40px;
         
         .social-link {
-            @include normal-link();
+            @include link-3();
+            color: $offwhite;
         }
     }
 
     .copyright {
         color: $gray;
         margin-bottom: 42px;
+        font-size: 11.2px;
     }
 }

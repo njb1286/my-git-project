@@ -1,0 +1,15 @@
+.about-page > .page-container > .content {
+    .chef {
+        width: 400px;
+        float: left;
+        margin-right: 30px;
+        margin-bottom: 30px;
+        margin-top: 20px;
+    }
+
+    p {
+        @include roboto();
+        letter-spacing: 1px;
+        line-height: 30px;
+    }
+}

@@ -8,6 +8,11 @@ import { pages } from './pages-list';
 import Footer from './footer';
 import Home from './pages/home';
 
+// Load images
+import _1 from "../../../../static/images/coding-class/about-us.jpg";
+import _2 from "../../../../static/images/coding-class/menu.jpg";
+import _3 from "../../../../static/images/coding-class/contact.jpg";
+
 
 export default class App extends Component {
     constructor() {
@@ -25,10 +30,6 @@ export default class App extends Component {
                             })
                         }
                     </Switch>
-
-                <br />
-                <br />
-                <br />
 
                     <Footer />
                     

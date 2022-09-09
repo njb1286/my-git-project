@@ -1,0 +1,111 @@
+.contact-page {
+    .page-container .content {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-gap: 100px;
+
+        .left-column {
+            .logo-wrapper img {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .info-container {
+                display: flex;
+                justify-content: space-between;
+                font-weight: 900;
+                @include ubuntu-condensed();
+                font-size: 1.25em;
+                margin-top: 20px;
+                margin-bottom: 20px;
+
+                .icon {
+                    display: flex;
+                    align-items: center;
+                    color: $gold;
+                }
+
+                .info {
+                    text-align: right;
+                }
+            }
+        }
+
+        .right-column {
+            @include roboto();
+
+            .form-group {
+                display: flex;
+                flex-direction: column;
+                margin-top: 30px;
+                margin-bottom: 30px;
+
+                label {
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    margin-left: 2rem;
+                    margin-top: .5rem;
+                    transition: .3s ease-in-out;
+                    color: $gold;
+                    opacity: 0;
+                    visibility: hidden;
+                }
+
+                input:focus + label, textarea:focus + label { // Note to self: Use the + if you want to select a sibling element
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(1rem);
+                }
+
+                input {
+                    border: none;
+                    border-bottom: 3px solid black;
+                }
+
+                textarea {
+                    border: 3px solid black;
+                    resize: none;
+                    height: 250px;
+                }
+
+                input, textarea {
+                    outline: none;
+                    font-size: 1.5rem;
+                    padding: 1.5rem;
+                    border-radius: 3px;
+                    transition: .2s;
+
+                    &::placeholder, & {
+                        color: black;
+                        font-weight: 300;
+                    }
+
+                    &:focus {
+                        border-color: $gold;
+                        box-shadow: 0px 15px 20px 10px rgba(0, 0, 0, 0.1);
+                    }
+                }
+            }
+
+            .send-btn-wrapper {
+                display: flex;
+                justify-content: center;
+
+                button {
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+                    background-color: $gold;
+                    font-size: 1.25rem;
+                    padding: 10px 25px;
+                    transition: .3s ease-in-out;
+                    margin-bottom: 60px;
+                    
+                    &:active {
+                        box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, .4);
+                    }
+                }
+            }
+        }
+    }
+}

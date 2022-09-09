@@ -1,0 +1,49 @@
+.feature-section {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    @include ubuntu-condensed();
+    border-top: 10px solid white;
+    box-shadow: inset 0px -26px 79px -8px rgba(0, 0, 0, 0.58);
+
+    .columns {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 1000px;
+        z-index: 2;
+
+        .column {
+            margin: 40px;
+            padding: 25px;
+            border-bottom: 5px solid transparent;
+            transition: .8s ease-in-out;
+            border-radius: 15px;
+            cursor: pointer;
+    
+            &:hover {
+                border-bottom-color: black;
+    
+                .title {
+                    letter-spacing: 2px;
+                }
+            }
+    
+            div {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+    
+            .title {
+                font-size: 1.5em;
+                font-weight: 800;
+                height: 80px;
+                transition: .8s ease-in-out;
+            }
+    
+            .icon {
+                font-size: 4em;
+            }
+        }
+    }
+
+}

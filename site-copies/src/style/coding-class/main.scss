@@ -1,9 +1,32 @@
+@import "./page-container.scss";
+@import "./fonts.scss";
 @import "./variables.scss";
 @import "./navbar.scss";
 @import "./footer.scss";
+@import "./hero-section.scss";
+@import "./feature-section.scss";
+@import "./skewed-header.scss";
+@import "./about-page-content.scss";
+@import "./squares.scss";
+@import "./contact.scss";
+@import "./media-queries.scss";
 
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap'); //&r
-
-* {
-    font-family: 'Titillium Web', sans-serif;
+.navbar {
+    @include ubuntu-condensed();
+    display: flex;
+    justify-content: space-between;
+    .nav-link {
+        width: 100%;
+        text-align: center;
+        a {
+            @include nav-link();
+            &:hover {
+                @include nav-link-hover();
+            }
+        }
+    
+        .nav-link-active {
+            @include nav-link-active();
+        }
+    }
 }

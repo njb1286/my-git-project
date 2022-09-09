@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import YouTube from 'react-youtube';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import TopImage from "../../../static/images/ninja/top-image.jpg";
-import DisplayImage from "../../../static/images/ninja/display.png";
-import GymPreview from "../../../static/images/ninja/gym-preview.jpg";
+import TopImage from "../../../../static/images/ninja/top-image.jpg";
+import DisplayImage from "../../../../static/images/ninja/display.png";
+import GymPreview from "../../../../static/images/ninja/gym-preview.jpg";
 
 import Link from "./nav-link";
 import Spacer from "./helpers/spacer";

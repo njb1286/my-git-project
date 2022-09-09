@@ -26,11 +26,34 @@
     }
 }
 
-@mixin normal-link {
+@mixin link-3 {
     cursor: pointer;
     transition: .3s;
-    color: $offwhite;
     &:hover {
         color: $gold;
     }
+}
+
+@mixin link-5 {
+    cursor: pointer;
+    transition: .5s;
+    &:hover {
+        color: $gold;
+    }
+}
+
+@mixin titillium-web {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+@mixin roboto-slab {
+    font-family: 'Roboto Slab', serif;
+}
+
+@mixin ubuntu-condensed {
+    font-family: "Ubuntu Condensed", sans-serif;
+}
+
+@mixin roboto {
+    font-family: "Roboto", sans-serif;
 }

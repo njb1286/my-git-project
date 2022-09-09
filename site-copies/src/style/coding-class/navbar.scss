@@ -1,107 +1,100 @@
-    @import "./mixins.scss";
+@import "./mixins.scss";
 
-    .navigation-wrapper {
-        background: $navy-blue;
+.navigation-wrapper {
+    @include titillium-web();
+    background: $navy-blue;
+    display: flex;
+    justify-content: space-between;
+    color: $offwhite;
+    padding: 60px 100px;
+
+    .logo img {
+        width: 200px;
+    }
+
+    .left {
+        // display: grid;
+        // grid-template-columns: 1fr 2fr;
+        // align-content: center;
+        // grid-gap: 5px;
         display: flex;
-        justify-content: space-between;
-        color: $offwhite;
 
-        .logo img {
-            width: 200px;
-        }
-
-        .left {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            align-content: center;
-            grid-gap: 5px;
-
-            .phone-icon {
-                display: flex;
-                align-items: center; 
-                justify-content: center;
-                font-size: 40px;
-            }
-            
-            .contact-hours-wrapper {
-                display: grid;
-                grid-template-rows: 1fr 1fr;        
-                grid-gap: 5px;
-        
-                .number {
-                    font-size: 18px;
-                }
-        
-                .hours {
-                    color: $gray;
-                    font-size: 12.8px;
-                }
-            }
-        }
-
-
-        .center {
-            width: 500px;
-
-            .logo {
-                margin-bottom: 30px;
-                display: flex;
-                justify-content: center;
-            }
-
+        .phone-icon {
+            display: flex;
+            align-items: center; 
+            justify-content: center;
+            font-size: 35px;
+            margin-right: 15px;
         }
         
+        .contact-hours-wrapper {
+            // display: grid;
+            // grid-template-rows: 1fr 1fr;        
+            // grid-gap: 5px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            div {
+                margin-top: 4px;
+                margin-bottom: 4px;
+            }
+    
+            .number {
+                font-size: 18px;
+            }
+    
+            .hours {
+                color: $gray;
+                font-size: 12.8px;
+            }
+        }
+    }
+
+
+    .center {
+        width: 500px;
+
+        .logo {
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+        }
+
+    }
+    
+    
+    .right {
+        display: flex;
+        align-items: center;
         
-        .right {
+        .link {
             display: flex;
             align-items: center;
+            text-align: right;
+            text-decoration: none;
             
-            .link {
-                display: grid;
-                grid-template-columns: 2fr 1fr;
-                align-items: center;
-                text-align: right;
-                text-decoration: none;
-                
-                .address-wrapper {
-                    color: $gray;
-                }
-                
-                .navigation-icon {
-                    font-size: 40px;
-                    display: flex;
-                    justify-content: center;
-                    color: $offwhite;
-                }
-                
+            .address-wrapper {
+                color: $gray;
+            }
+            
+            .navigation-icon {
+                font-size: 40px;
+                display: flex;
+                justify-content: center;
+                color: $offwhite;
+                margin-left: 15px;
+            }
+            
+            .address-wrapper, .navigation-icon {
+                transition: .5s;
+            }
+            
+            &:hover {
                 .address-wrapper, .navigation-icon {
-                    transition: .5s;
-                }
-                
-                &:hover {
-                    .address-wrapper, .navigation-icon {
-                        color: $gold;
-                    }
+                    color: $gold;
                 }
             }
         }
     }
-
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        .nav-link {
-            width: 100%;
-            text-align: center;
-            a {
-                @include nav-link();
-                &:hover {
-                    @include nav-link-hover();
-                }
-            }
-        
-            .nav-link-active {
-                @include nav-link-active();
-            }
-        }
-    }
+}

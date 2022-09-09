@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import facebook from "../../../static/images/ninja/social_links/facebook.png";
-import instagram from "../../../static/images/ninja/social_links/instagram.png";
+import facebook from "../../../../static/images/ninja/social_links/facebook.png";
+import instagram from "../../../../static/images/ninja/social_links/instagram.png";
 
 export default class Header extends Component {
     render() {

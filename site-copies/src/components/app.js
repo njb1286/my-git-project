@@ -10,8 +10,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleUser, faLocationDot, faPhoneVolume } from "@fortawesome/free-solid-svg-icons";
 
 import Homepage from './homepage';
-import Ninja from '../pages/ninja/main';
-import CodingClass from "../pages/first-coding-class-remake/main";
+import Ninja from './pages/ninja/main';
+import CodingClass from "./pages/first-coding-class-remake/main";
+import VirtualDesktop from './pages/virtual-desktop/main';
+
 import pageStats from "./page-stats";
 
 library.add(faCircleUser, faPhoneVolume, faLocationDot);
@@ -35,6 +37,14 @@ export default class App extends Component {
           bodyStyles: "margin: 0;",
           path: "coding-class",
           component: <CodingClass />,
+          exact: false
+        },
+
+        {
+          title: "Virtual Desktop",
+          bodyStyles: "margin: 0;",
+          path: "virtual-desktop",
+          component: <VirtualDesktop />,
           exact: false
         }
       ]

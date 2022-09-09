@@ -1,0 +1,27 @@
+.hero-section {
+    @include roboto-slab();
+    padding: 100px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 300px;
+
+    .top-heading {
+        background-color: $navy-blue;
+        color: $offwhite;
+        width: 290px;
+        text-align: center;
+    }
+
+    .bottom-heading {
+        background-color: $gold;
+        color: black;
+        width: 107px;
+        text-align: center;
+    }
+
+    .top-heading, .bottom-heading {
+        padding: 20px 20px;
+    }
+}

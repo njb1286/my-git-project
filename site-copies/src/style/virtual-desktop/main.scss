@@ -1,9 +1,11 @@
 @import "./mixins.scss";
 @import "./window.scss";
+@import "./actions-bar.scss";
+@import "./action-input.scss";
 
 & {
     font-family: sans-serif;
-    background-image: url("https://unsplash.it/1920/1200");
+    background-image: url("https://picsum.photos/1920/1200");
     @include full-page();
     background-color: violet;
     background-repeat: no-repeat;

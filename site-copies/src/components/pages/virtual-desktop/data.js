@@ -1,10 +1,12 @@
-import Notepad from "../../../../static/images/virtual-desktop/apps/notepad.png";
+import React from "react";
+
+import NotepadIcon from "../../../../static/images/virtual-desktop/apps/notepad.png";
+import Notepad from "./apps/notepad";
 
 export const Apps = [
     {
         name: "Notepad",
-        path: "notepad",
-        icon: Notepad,
-        id: Math.floor(Math.random() * 10000)
+        icon: NotepadIcon,
+        content: <Notepad />
     }
 ]

@@ -1,0 +1,43 @@
+.actions-bar {
+    user-select: none;
+    -webkit-user-drag: none;
+    background-color: white;
+    display: flex;
+    border-bottom: 2px solid lightgray;
+
+    .action-item {
+        position: relative;
+        cursor: pointer;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        padding-left: 4px;
+        padding-right: 4px;
+
+        &:hover {
+            border-color: #cbcbcb;
+            .actions-list {
+                display: block;
+
+                &:active {
+                    display: none;
+                }
+            }
+        }
+
+        .actions-list {
+            position: absolute;
+            background-color: white;
+            border: 1px solid gray;
+            min-width: 100px;
+            box-shadow: 3px 3px 6px -2px rgba(0, 0, 0, 0.5);
+            display: none;
+
+            .action {
+                cursor: pointer;
+                &:hover {
+                    background-color: #dbdbdb;
+                }
+            }
+        }
+    }
+}

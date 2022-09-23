@@ -1,0 +1,26 @@
+.button-switch {
+    position: relative;
+    background: $normal;
+    
+    .switch-handler {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    &:hover {
+        background: $hover;
+    }
+    
+    &:has(.switch-handler:checked) {
+        background: $on;
+        &:hover {
+            background: $on-hover;
+        }
+    }
+}

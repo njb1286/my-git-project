@@ -1,7 +1,9 @@
+@import "./variables.scss";
 @import "./mixins.scss";
 @import "./window.scss";
 @import "./actions-bar.scss";
 @import "./action-input.scss";
+@import "./switches.scss";
 
 & {
     font-family: sans-serif;

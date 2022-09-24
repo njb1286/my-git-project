@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import ActionBar, { actionCheckbox as ActionCheckbox } from '../helpers/action-bar';
+import ActionBar from '../helpers/action-bar';
 import { setLocalStorageItem, getLocalStorageItem } from '../helpers/local-storage';
 import ButtonSwitch from '../switches/button';
 
@@ -9,11 +9,11 @@ export default class Notepad extends Component {
         super();
 
         this.state = {
-            fontSize: getLocalStorageItem('notepad', 'fontSize'),
-            text: getLocalStorageItem('notepad', 'text'),
-            fontWeight: getLocalStorageItem('notepad', 'fontWeight'),
-            fontStyle: getLocalStorageItem('notepad', 'fontStyle'),
-            textDecoration: getLocalStorageItem('notepad', "textDecoration"),
+            fontSize: getLocalStorageItem('notepad').fontSize,
+            text: getLocalStorageItem('notepad').text,
+            fontWeight: getLocalStorageItem('notepad').fontWeight,
+            fontStyle: getLocalStorageItem('notepad').fontStyle,
+            textDecoration: getLocalStorageItem('notepad').textDecoration,
         }
 
         this.changeValue = this.changeValue.bind(this);
@@ -68,65 +68,6 @@ export default class Notepad extends Component {
                             <div onMouseDown={() => document.querySelector('.close-wrapper').click()}>Close</div>,
                         ]}
                         closeOnClick 
-                    />
-
-                    <ActionBar
-                        title="Styles"
-                        actions={[
-                            <ActionBar 
-                                title="Font Size"
-                                actions={
-                                    this.range(0, 99).slice(1).map(e => {
-                                        return <div 
-                                            className={parseInt(this.state.fontSize) === e ? "selected-item" : ""} 
-                                            onMouseDown={() => {
-                                            this.setState({
-                                                fontSize: e
-                                            })
-                                            setLocalStorageItem('notepad', 'fontSize', e);
-                                        }}>{`${e}px`}</div>;
-                                    })
-                                }
-                                nested
-                                autoScroll
-                                closeOnClick
-                            />,
-
-                            <ActionBar 
-                                title="Font Style"
-                                nested
-                                autoScroll
-                                actions={
-                                    [
-                                        <ActionCheckbox style={{fontWeight: "800"}} title="Bold" checked={this.state.fontWeight === '100' ? false : true} input={() => this.changeValue('fontWeight', this.toggleValue(this.state.fontWeight, "800", "100"))} />,
-                                        <ActionCheckbox style={{fontStyle: "italic"}} title="Italic" checked={this.state.fontStyle === 'italic' ? true : false} input={() => this.changeValue('fontStyle', this.toggleValue(this.state.fontStyle, "italic", "unset"))} />,
-                                        <ActionCheckbox style={{textDecoration: "underline"}} title="Underlined" checked={this.state.textDecoration.includes("underline") ? true : false} input={() => this.changeValue('textDecoration', this.toggleValue(this.state.textDecoration, "underline", ""))} />,
-                                    ]
-                                }
-                            />
-                        ]}
-                    />
-
-                    <ActionBar 
-                        title="Test"
-                        actions={[
-                            <ButtonSwitch 
-                                content={<div>Hello</div>}
-                                whenOn={() => console.log("Hello, world!")}
-                            />,
-                            <ButtonSwitch 
-                                content={<div>Hello</div>}
-                                whenOn={() => console.log("Hello, world!")}
-                            />,
-                            <ButtonSwitch 
-                                content={<div>Hello</div>}
-                                whenOn={() => console.log("Hello, world!")}
-                            />,
-                            <ButtonSwitch 
-                                content={<div>Hello</div>}
-                                whenOn={(e, on) => console.log(on)}
-                            />
-                        ]}
                     />
                 </div>
                 

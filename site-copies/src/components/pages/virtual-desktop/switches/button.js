@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
 
 export default class ButtonSwitch extends Component {
+    // Props:
+        /*
+            this.props.content
+            this.props.on
+            this.props.whenOn
+            
+        */
+
     constructor(props) {
         super(props);
 
@@ -15,7 +23,7 @@ export default class ButtonSwitch extends Component {
         this.setState({
             on: this.state.on ? false : true
         },
-            !this.state.on ? func(target, !this.state.on) : null
+            !this.state.on && func ? func(target, !this.state.on) : null
         )
     }
 

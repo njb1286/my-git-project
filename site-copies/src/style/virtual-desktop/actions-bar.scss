@@ -18,9 +18,13 @@
             .actions-list {
                 display: block;
 
-                &:active {
-                    display: none;
-                }
+                // &:is(.close-on-click):active {
+                //     display: none;
+                // }
+            }
+
+            &:is(.close-on-click):active .actions-list {
+                display: none;
             }
         }
 
